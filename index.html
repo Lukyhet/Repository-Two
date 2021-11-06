@@ -19,15 +19,64 @@
         <img class="logo" src="assets/images/cine3.png" alt="logo"> Movie Trivia!
     </h1>
 
-    <div class="game-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-    </div>
-
-    <div class="score-area">
+    <div class ="main-box" id="box">
+        <h2>Ready?</h2>
+    
+        <p>Questions:<span class="number-question">20</span></p>
+        <p>Select the correct answer</p>
         
+        <button id="button" class="btn">Start Quiz</button>
     </div>
 
+    <div class="main-box box hidden-content" id="holder">
+        <div class="question-number" id="question-number">
+        </div>
+
+        <div class ="quest-text" id="ques-text">
+        </div>
+    
+        <div class="option-container" id="option-container">
+            <button type="button" class="btn answer" name="answer" id="answer1"></button>
+            <button type="button" class="btn answer" name="answer" id="answer2"></button>
+            <button type="button" class="btn answer" name="answer" id="answer3"></button>
+            <button type="button" class="btn answer" name="answer" id="answer4"></button>
+
+        </div>
+
+        <div class="answers-indicator">
+        </div>
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores incorrect">Incorrect Answers <span id="incorrect-score">0</span></p>
+        </div>
+    </div> 
+
+    
+    
+    <div class="results main-box hidden-content" id="results">
+        <h1>Your results</h1>
+        <table style="width:100%">
+            <tr>
+                <th class="result">Questions</th>
+                <td><span class="questions" id="questions">20</span></td>
+            </tr>
+            <tr>
+                <th class="results">Correct Answers</th>
+                <td><span class="total-correct" id="total-correct"></span></td>
+            </tr>
+            <tr>
+                <th class="results">Incorrect Answers</th>
+                <td><span class="total-incorrect" id="total-incorrect"></span></td>
+            </tr>
+        </table>
+        <p class="comment" id="comment1">18-20: Great! Have you consider a job in the movie industry?</p>
+        <p class="comment" id="comment2">11-17: Good! Pop your corn and learn more while enjoying a movie!</p>
+        <p class="comment" id="comment3">6-10: Meh...We know you can do better!</p>
+        <p class="comment" id="comment4">0-5: Nahh! Are you kidding?</p>
+        <button type="button" class="btn" id="again">Try Again</button>
+    </div>
+
+</body>
     <script src="assets/js/script.js"></script>
 
 </body>
