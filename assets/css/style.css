@@ -3,10 +3,11 @@
 
 body {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 25px;
     font-family: Lato, sans-serif;
     background-color: white;
     color: #05263B;
+    text-align: center;
 }
 
 *{
@@ -18,7 +19,7 @@ body {
 
 .heading {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .logo {
