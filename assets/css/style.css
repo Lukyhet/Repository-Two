@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
+
+/* Global style */
 
 body {
     font-weight: 600;
@@ -11,9 +13,12 @@ body {
 }
 
 *{
-    padding: 10px;
-
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
 }
+
+ 
 
 /* Heading */
 
@@ -23,8 +28,8 @@ body {
 }
 
 .logo {
-    height: 50px;
-    padding-right: 5px;
+    height: 63px;
+    padding-right: 2px;
 }
 
 /* Trivia layout */
@@ -86,7 +91,7 @@ body {
 
 .quiz-area .question-number{
     font-size: 20px;
-    color: black;
+    color: #05263B;
     font-weight: 600;
     border-bottom: 1px solid white;
     padding-bottom: 10px;
