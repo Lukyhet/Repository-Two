@@ -90,6 +90,16 @@ body {
 
 }
 
+.btn:active {
+
+    transform:scale(0.8);
+    transform:translateY(4px);
+    box-shadow: 0 0 10px #05263B;
+
+}
+
+
+
 /*Quiz style*/
 
 .quiz-area .question-number{

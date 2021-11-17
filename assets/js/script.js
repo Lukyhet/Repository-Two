@@ -190,7 +190,7 @@ function shuffleQuestionsArray(array) {
 
   
 
-  function startGame() {
+function startGame() {
     homeBox.classList.add('hidden-content');
     document.getElementById('question-area').classList.remove('hidden-content');
     shuffleQuestions = shuffleQuestionsArray(quiz);
@@ -237,7 +237,7 @@ function displayIncorrectScore() {
 }
 
 function validateAnswer(event) {
-    console.log('I clicked ', event.target.innerText);
+    console.log('I clicked', event.target.innerText);
     const selectedAnswerText = event.target.innerText;
     const currentQuestion = shuffleQuestions[questionIndex];
     const correctAnswerIndex = currentQuestion.answer;
@@ -265,7 +265,7 @@ function finishGame() {
     document.getElementById("comment2").innerHTML = '11-14: Good! Keep up with the good movie fandom!';
     document.getElementById("comment3").innerHTML = '5-10: Average, Pop your corn and learn a bit more while enjoying a movie!';
     document.getElementById("comment4").innerHTML = '0-4: Booo...We know you can do better.';
-    if (score >= 16) {
+    if (score >= 14) {
         console.log('14-16');
         var textToHighlight = '<span style="color:red"> 14-16: Great! Have you consider a job in the movie industry?</span>';
         document.getElementById("comment1").innerHTML = textToHighlight;
@@ -273,7 +273,7 @@ function finishGame() {
         console.log('11-14');
         var textToHighlight = '<span style="color:red"> 11-14: Good! Keep up with the good movie fandom!</span>';
         document.getElementById("comment2").innerHTML = textToHighlight;
-    } else if (score >= 6) {
+    } else if (score >= 5) {
         console.log('5-10');
         var textToHighlight = '<span style="color:red"> 5-10: Average, Pop your corn and learn a bit more while enjoying a movie! </span>';
         document.getElementById("comment3").innerHTML = textToHighlight;
@@ -283,3 +283,37 @@ function finishGame() {
         document.getElementById("comment4").innerHTML = textToHighlight;
     }
 }
+
+
+
+/**sound for button when clicked */
+
+const sounds = ['tick'];
+
+sounds.forEach((sound) => {
+    const btn = document.createElement('button');
+    btn.classList.add('btn');
+
+    btn.innerText = sound;
+
+    btn.addEventListener('click', ()=> {
+        stopSongs();
+        document.getElementById(sound).play();
+    })
+
+    document.getElementById('buttons').appendChild(btn);
+
+})
+
+function stopSongs() {
+    sounds.forEach(sound => {
+        const song = document.getElementById(sound);
+
+        song.pause();
+        song.currentTime = 0;
+        
+    })
+}
+
+
+
