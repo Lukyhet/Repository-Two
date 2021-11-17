@@ -277,7 +277,7 @@ function finishGame() {
         document.getElementById("comment2").innerHTML = textToHighlight;
         document.getElementById("comment2").classList.remove('hidden-content');
     } else if (score >= 5) {
-        var textToHighlight = '<span style="color:red"> 5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie! </span>';
+        var textToHighlight = '<span style="color:red"> 5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie!</span>';
         document.getElementById("comment3").innerHTML = textToHighlight;
         document.getElementById("comment3").classList.remove('hidden-content');
     } else {
@@ -286,8 +286,6 @@ function finishGame() {
         document.getElementById("comment4").classList.remove('hidden-content');
     }
 }
-
-
 
 /**sound for button when clicked */
 
@@ -318,11 +316,14 @@ function stopSongs() {
     })
 }
 
+/**
+ * Function for timer
+ */
 function startTimer(){
     timerCounter = 0;
     timer = setInterval(function(){
         timerCounter = timerCounter + 1;
-        document.getElementById('timer-counter').innerText = timerCounter.toString() + 'Seconds';
+        document.getElementById('timer-counter').innerText = timerCounter.toString() + ' Seconds';
     }, 1000)
 }
 
