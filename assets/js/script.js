@@ -21,7 +21,7 @@ let quiz = [{
     answer: 2
 },
 {
-    q: "In what 1976 thriller does Robert De Niro famously say “You talkin’ to me?”?",
+    q: "In what 1976 thriller does Robert De Niro famously say “You talkin’ to me?",
     options: ["The Irishman", "Taxi Driver", "The Godfather", "Meet the Fuckers"],
     answer: 1
 },
@@ -37,7 +37,7 @@ let quiz = [{
 },
 {
     q: "Actress Drew Barrimore's first movie was this one directed by Steven Spilberg",
-    options: ["Jaws", "War of the Worlds", ", E.T.", "Indiana Jones the Lost ark"],
+    options: ["Jaws", "War of the Worlds", "E.T.", "Indiana Jones the Lost ark"],
     answer: 2
 },
 {
@@ -106,8 +106,8 @@ let quiz = [{
     answer: 0
 },
 {
-    q: "What is the song played at the end of The Fight CLub?",
-    options: ["Start again", "Army of me", "Where is my mind", "Easy Samck It Up"],
+    q: "What is the name of the song played at the end of Fight CLub?",
+    options: ["Start again", "Army of me", "Where is my mind", "Easy Smack It Up"],
     answer: 2
 },
 {
@@ -134,7 +134,7 @@ let quiz = [{
 },
 
 {
-    q: "Where is this movie quote from 'Carpe, carpe diem, seize the day boys, make your lives extraordinary!'?",
+    q: "Where is this movie quote from 'Carpe diem, seize the day boys, make your lives extraordinary!'?",
     options: ["Dead Poets Society", "Home Alone", "Jack", "Mulan"],
     answer: 0
 },
@@ -146,7 +146,7 @@ let quiz = [{
 {
     q: "According to this movie the apocalypse happens in the year 2003?",
     options: ["Armageddon", "Deep Impact", "Terminator", "Mad Max"],
-    answer: 0
+    answer: 2
 },
 {
     q: "In whis movie is 'Precrime' a predictive policing system?",
@@ -154,3 +154,132 @@ let quiz = [{
     answer: 3
 },
 ]
+
+let shuffleQuestions = [];
+let questionNumber = 1;
+let questionIndex = 0;
+let score = 0;
+let incorrectScore = 0;
+let startButton = document.getElementById("button");
+let homeBox = document.getElementById("home-box");
+let questionHolder = document.getElementById("question-area");
+startButton.addEventListener('click', startGame);
+document.querySelectorAll('.answer')
+    .forEach(button => button.addEventListener('click', validateAnswer));
+document.getElementById('try-again').addEventListener('click', resetGame);
+
+/** Functions for quiz based on Stack Overflow's How to randomize (shuffle) a JavaScript array?*/
+
+function shuffleQuestionsArray(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
+  
+
+  function startGame() {
+    homeBox.classList.add('hidden-content');
+    document.getElementById('question-area').classList.remove('hidden-content');
+    shuffleQuestions = shuffleQuestionsArray(quiz);
+    displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+}
+
+function resetGame() {
+    shuffleQuestions = [];
+    questionNumber = 1;
+    questionIndex = 0;
+    score = 0;
+    incorrectScore = 0;
+    document.getElementById('result-box').classList.add('hidden-content');
+    displayScore();
+    displayIncorrectScore();
+    homeBox.classList.remove('hidden-content');
+}
+
+function displayQuestion(question, number) {
+    document.getElementById('question-text').innerText = question['q'];
+    document.getElementById('question-number').innerText = number;
+    document.getElementById('answer1').innerText = question['options'][0];
+    document.getElementById('answer2').innerText = question['options'][1];
+    document.getElementById('answer3').innerText = question['options'][2];
+    document.getElementById('answer4').innerText = question['options'][3];
+}
+
+function getNextQuestion() {
+    if (questionNumber < 16) {
+        questionNumber = questionNumber + 1;
+        questionIndex = questionIndex + 1;
+        displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+    } else {
+        finishGame();
+    }
+}
+
+function displayScore() {
+    document.getElementById("score").innerText = score;
+}
+
+function displayIncorrectScore() {
+    document.getElementById("incorrect-score").innerText = incorrectScore;
+}
+
+function validateAnswer(event) {
+    console.log('I clicked ', event.target.innerText);
+    const selectedAnswerText = event.target.innerText;
+    const currentQuestion = shuffleQuestions[questionIndex];
+    const correctAnswerIndex = currentQuestion.answer;
+    const correctAnswerText = currentQuestion.options[correctAnswerIndex];
+    console.log(selectedAnswerText, correctAnswerText);
+    if (correctAnswerText.localeCompare(selectedAnswerText) === 0) {
+        score = score + 1;
+        console.log('Correct Answer');
+        displayScore();
+    } else {
+        console.log('Incorrect Answer');
+        incorrectScore = incorrectScore + 1;
+        displayIncorrectScore();
+    }
+    getNextQuestion();
+}
+
+function finishGame() {
+    questionHolder.classList.add('hidden-content');
+    document.getElementById('result-box').classList.remove('hidden-content');
+    document.getElementById('questions').innerText = 16;
+    document.getElementById('total-correct').innerText = score;
+    document.getElementById('total-incorrect').innerText = incorrectScore;
+    document.getElementById("comment1").innerHTML = '14-16: Great! Have you consider a job in the movie industry?';
+    document.getElementById("comment2").innerHTML = '11-14: Good! Keep up with the good movie fandom!';
+    document.getElementById("comment3").innerHTML = '5-10: Average, Pop your corn and learn a bit more while enjoying a movie!';
+    document.getElementById("comment4").innerHTML = '0-4: Booo...We know you can do better.';
+    if (score >= 16) {
+        console.log('14-16');
+        var textToHighlight = '<span style="color:red"> 14-16: Great! Have you consider a job in the movie industry?</span>';
+        document.getElementById("comment1").innerHTML = textToHighlight;
+    } else if (score >= 11) {
+        console.log('11-14');
+        var textToHighlight = '<span style="color:red"> 11-14: Good! Keep up with the good movie fandom!</span>';
+        document.getElementById("comment2").innerHTML = textToHighlight;
+    } else if (score >= 6) {
+        console.log('5-10');
+        var textToHighlight = '<span style="color:red"> 5-10: Average, Pop your corn and learn a bit more while enjoying a movie! </span>';
+        document.getElementById("comment3").innerHTML = textToHighlight;
+    } else {
+        console.log('0-4');
+        var textToHighlight = '<span style="color:red"> 0-4: Booo...We know you can do better. </span>';
+        document.getElementById("comment4").innerHTML = textToHighlight;
+    }
+}
