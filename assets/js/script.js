@@ -1,7 +1,7 @@
-/** Array of Objects */
+/** Array of Objects-quiz questions */
 
 let quiz = [{
-    q: "In The Matrix, does Neo take the blue pill or the red pill?",
+    q: "What is the color of the pill that Neo takes in the movie The Matrix?",
     options: ["Blue", "Red", "Green", "Silver"],
     answer: 1
 },
@@ -31,12 +31,12 @@ let quiz = [{
     answer: 2
 },
 {
-    q: "The line 'No, I am your father' is said by Darth Vader in this episode of Star Wars",
+    q: "The line 'No, I am your father' belongs to this episode of Star Wars",
     options: ["Episode V - The Empire Strikes Back", "Episode II: Attack of the Clones ", "Episode III: Revenge of the Sith ", "Episode VI: Return of the Jedi"],
     answer: 0
 },
 {
-    q: "Actress Drew Barrimore's first movie was this one directed by Steven Spilberg",
+    q: "What was actress Drew Barrimore's first movie?",
     options: ["Jaws", "War of the Worlds", "E.T.", "Indiana Jones the Lost ark"],
     answer: 2
 },
@@ -86,7 +86,7 @@ let quiz = [{
     answer: 3
 },
 {
-    q: "which one is not a black and white movie?",
+    q: "Which one is not a black and white movie?",
     options: ["Schindler's List", "Black Swan", "American History X", "Persepolis"],
     answer: 1
 },
@@ -111,7 +111,7 @@ let quiz = [{
     answer: 2
 },
 {
-    q: "in the movie Signs directed by M. Night Shyamalan, Mel Gibson plays a...?",
+    q: "In the movie Signs directed by M. Night Shyamalan, Mel Gibson plays a...?",
     options: ["Sherif", "Policeman", "Astronaut", "Priest"],
     answer: 3
 },
@@ -149,12 +149,14 @@ let quiz = [{
     answer: 2
 },
 {
-    q: "In whis movie is 'Precrime' a predictive policing system?",
+    q: "In what movie is 'Precrime' a predictive policing system?",
     options: ["Elysium", "I, Robot", "Blade Runner", "Minority Report"],
     answer: 3
 },
 ]
 
+let timerCounter = 0;
+let timer;
 let shuffleQuestions = [];
 let questionNumber = 1;
 let questionIndex = 0;
@@ -195,6 +197,7 @@ function startGame() {
     document.getElementById('question-area').classList.remove('hidden-content');
     shuffleQuestions = shuffleQuestionsArray(quiz);
     displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+    startTimer();
 }
 
 function resetGame() {
@@ -237,18 +240,14 @@ function displayIncorrectScore() {
 }
 
 function validateAnswer(event) {
-    console.log('I clicked', event.target.innerText);
     const selectedAnswerText = event.target.innerText;
     const currentQuestion = shuffleQuestions[questionIndex];
     const correctAnswerIndex = currentQuestion.answer;
     const correctAnswerText = currentQuestion.options[correctAnswerIndex];
-    console.log(selectedAnswerText, correctAnswerText);
     if (correctAnswerText.localeCompare(selectedAnswerText) === 0) {
-        score = score + 1;
-        console.log('Correct Answer');
+        score = score + 1; 
         displayScore();
     } else {
-        console.log('Incorrect Answer');
         incorrectScore = incorrectScore + 1;
         displayIncorrectScore();
     }
@@ -256,6 +255,10 @@ function validateAnswer(event) {
 }
 
 function finishGame() {
+    clearInterval(timer);
+    document.getElementById('total-time').innerText = timerCounter.toString() + ' Seconds';
+    timerCounter = 0;
+    document.getElementById('timer-counter').innerText = '0 Seconds';
     questionHolder.classList.add('hidden-content');
     document.getElementById('result-box').classList.remove('hidden-content');
     document.getElementById('questions').innerText = 16;
@@ -263,24 +266,24 @@ function finishGame() {
     document.getElementById('total-incorrect').innerText = incorrectScore;
     document.getElementById("comment1").innerHTML = '14-16: Great! Have you consider a job in the movie industry?';
     document.getElementById("comment2").innerHTML = '11-14: Good! Keep up with the good movie fandom!';
-    document.getElementById("comment3").innerHTML = '5-10: Average, Pop your corn and learn a bit more while enjoying a movie!';
+    document.getElementById("comment3").innerHTML = '5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie!';
     document.getElementById("comment4").innerHTML = '0-4: Booo...We know you can do better.';
     if (score >= 14) {
-        console.log('14-16');
         var textToHighlight = '<span style="color:red"> 14-16: Great! Have you consider a job in the movie industry?</span>';
         document.getElementById("comment1").innerHTML = textToHighlight;
+        document.getElementById("comment1").classList.remove('hidden-content');
     } else if (score >= 11) {
-        console.log('11-14');
         var textToHighlight = '<span style="color:red"> 11-14: Good! Keep up with the good movie fandom!</span>';
         document.getElementById("comment2").innerHTML = textToHighlight;
+        document.getElementById("comment2").classList.remove('hidden-content');
     } else if (score >= 5) {
-        console.log('5-10');
-        var textToHighlight = '<span style="color:red"> 5-10: Average, Pop your corn and learn a bit more while enjoying a movie! </span>';
+        var textToHighlight = '<span style="color:red"> 5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie! </span>';
         document.getElementById("comment3").innerHTML = textToHighlight;
+        document.getElementById("comment3").classList.remove('hidden-content');
     } else {
-        console.log('0-4');
-        var textToHighlight = '<span style="color:red"> 0-4: Booo...We know you can do better. </span>';
+        var textToHighlight = '<span style="color:red"> 0-4: Booo...We know you can do better.</span>';
         document.getElementById("comment4").innerHTML = textToHighlight;
+        document.getElementById("comment4").classList.remove('hidden-content');
     }
 }
 
@@ -288,7 +291,7 @@ function finishGame() {
 
 /**sound for button when clicked */
 
-const sounds = ['tick'];
+const sounds = [];
 
 sounds.forEach((sound) => {
     const btn = document.createElement('button');
@@ -301,7 +304,7 @@ sounds.forEach((sound) => {
         document.getElementById(sound).play();
     })
 
-    document.getElementById('buttons').appendChild(btn);
+    document.getElementById('btn').appendChild(btn);
 
 })
 
@@ -313,6 +316,14 @@ function stopSongs() {
         song.currentTime = 0;
         
     })
+}
+
+function startTimer(){
+    timerCounter = 0;
+    timer = setInterval(function(){
+        timerCounter = timerCounter + 1;
+        document.getElementById('timer-counter').innerText = timerCounter.toString() + 'Seconds';
+    }, 1000)
 }
 
 
