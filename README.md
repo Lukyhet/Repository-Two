@@ -5,30 +5,6 @@
 
 [View the live project here](https://lukyhet.github.io/Repository-Two/)
 
-## Table of contents
-1. [Introduction](#Introduction)
-2. [UX](#UX)
-    1. [Ideal User Demographic](#Ideal-User-Demographic)
-    2. [Design](#Design)
-3. [Features](#Features)
-    1. [Design Features](#Design-Features) 
-    2. [Existing Features](#Existing-Features)
-    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
-4. [Issues and Bugs](#Issues-and-Bugs)
-5. [Technologies Used](#Technologies-Used)
-     1. [Main Languages Used](#Main-Languages-Used)
-     3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
-6. [Testing](#Testing)
-     1. [Testing.md](TESTING.md)
-7. [Deployment](#Deployment)
-     1. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
-8. [Credits](#Credits)
-     1. [Content](#Content)
-     2. [Media](#Media)
-     3. [Code](#Code)
-9. [Acknowledgements](#Acknowledgements)
-***
-
 ## Introduction
 
 Our trivia game is called 'Trivia Movie!'  It was made to provide a fun trivia challenge for those interested in movies. The target audience is those who love movies and want to test their knowledge about them.
@@ -46,79 +22,29 @@ This Trivia was made as the second milestone project to achieve the Diploma in S
 The purpose of this project is the Presentation of interactive data, and the main goal is to build an interactive front-end site that responds to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.
 
 
-
-[Back to top ⇧](#Survival-Guild)
-
 ## UX
 ###  User Demographic
-The user for this website is:
-* 
+The user for this website is: 
 
-### User-Stories
-#### Current User Goals
-1. As a current user, I want to see regular updates to the information and breaking news on the home page as the situation develops.
-2. As a current user, I want to easily navigate through the site and access the information I require with ease.
-3. As a current user, I want to easily navigate to content I have previously viewed within a small number of steps.
+- Young and adult people who are interested in pop culture and the film indsutry. 
+- Those who enjoy playing short games and taking online quizes and trivias.
+- Movie lovers or film fans that consider fun to accumulate knowledge about this topic.
 
-#### New User Goals
-1. As a new user, I want to easily navigate the entire site intuitively. 
-2. As a new user, I want the information I seek to be easily accessible and relevant.
-3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content.
 
-#### Survivalist Goals
-1. As a survivalist, I want to factually correct and relevant information.
-2. As a survivalist, I want the information I seek to be easily accessible and relevant.
-3. As a survivalist, I want to see instructional images and/or videos with user controls relevant to the information.
+#### User Goals
+
+- To have a great time and test the user’s knowledge about movies.
+- See attractive and contrasting colours as well as a clear design in the trivia game.
+- Have clear scores and a timer to be able to assess the user’s abilities.
 
 ### Development-Planes
 To create a comprehensive website that answers the above user stories and identifies the functionality of the site, the developer must develop all aspects of the fictional world for which the website is being created for. This includes a background story, a breaking news feed, survival information and creating a how-to-guide to defend against infected individuals.
 
-#### Strategy
-Strategy incorporates user needs as well as product objectives. This website will focus on the following target audience, divided into three main categories:
-- **Roles:**
-    - Current users
-    - New users
-    - Experienced survivalists
-    - Beginner survivalists
+## Features 
 
-- **Demographic:**
-    - All ages
-    - Irish or residing in Ireland
-    - Beginner to experienced Preppers/Survivalists
+This is a one page website with with a trivia game tha displays a title 'Movie Trivia!', a logo which is a free .png icon made by (https://www.freepik.com) and downloaded from (https://www.flaticon.com/)
 
-- **Psychographic:**
-    - Lifestyles:
-        - Interest in Nature
-        - Active
-    - Personality/Attitudes:
-        - Outgoing
-        - Focused
-        - Creative
-    - Values:
-        - Environmentally friendly
-        - Sense of community
-
-The website needs to enable the **user** to:
-- Retrieve the desired information:
-    - Survival/hunting/gathering guide
-    - Camp building and fortification guide
-    - Backpack essentials
-    - Tips and techniques for defending against the Infected
-    - Recommended equipment (hunting/tools/weapons/armor/etc.)
-    - Report suspected cases for a referral.
-    
-The website needs to enable the **site manager** to:
-- Gather reports of suspected cases for a referral.
-- Gather entries for the competition draw.
-    
-With the above information in mind, a strategy table was created to show the trade-offs between what is important and what is viable with the following results.
-
-
-<details>
-<summary>Strategy Plane - Viability/Feasibility Table</summary>
-
-![Strategy Table](assets/readme-files/strategy-table.png)
-
+the four sections are easily identifiable by the contrast of the background and the subtitles. The website has several features. These features are:
 </details>
 
 
