@@ -1,9 +1,9 @@
 # Movie Trivia!
 
 
-![Movie Trivia!](assets/readme-files/survival-guild.PNG)
+![Movie Trivia!](assets/readme-files/Mtrivia.png)
 
-[View the live project here](https://irishbecky91.github.io/survival-guild/)
+[View the live project here](https://lukyhet.github.io/Repository-Two/)
 
 ## Table of contents
 1. [Introduction](#Introduction)
@@ -31,28 +31,28 @@
 
 ## Introduction
 
-This trivia called Trivia Movie! the website was made to provide a fun trivia those interested in the film industry, the trivia eas created with entertainment purposes. The target audience is those who love movies and want to challenge their knowledge about them.
+Our trivia game is called 'Trivia Movie!'  It was made to provide a fun trivia challenge for those interested in movies. The target audience is those who love movies and want to test their knowledge about them.
 
 <details>
 
-![Image of the trivia](assets/readme-files/infected-zones.png)
+![Image of the trivia](assets/readme-files/Mt.png)
 
 </details>
 
-The idea for the site is based upon a fictional story, created by the developer. In this fictional world, COVID-19 has mutated upon coming into contact with a fungus named Ophiocordyceps unilateralis (Nicknamed the "Zombie Ant Fungus") in Southern Thailand. This combination has produced a group of infected individuals who resemble zombies with a hive mentality and a hunger for flesh. The mutation has spread to all corners of the globe save for a few infection-free zones, one of which is Ireland.
+Movie Trivia was created for entertainment purposes. It has thirty different questions and presents displays sixteen of them to the user. The subject of the trivia is “all about movies” and challenges the user’s general knowledge about this topic. When done, the trivia game shows a table of results that displays the correct and incorrect answers as well as the time taken to answer them.
 
-This website was made for the first of five Milestone projects required to complete the Diploma in Software development (eCommerce Applications) program at The Code Institute. 
+This Trivia was made as the second milestone project to achieve the Diploma in Software Development at the Code Institute. 
 
-The main requirements of this project are to build a responsive and static front-end site to present useful information to users using all the technologies learned so far, namely HTML5 and CSS3. The site is to contain no less than three pages.
+The purpose of this project is the Presentation of interactive data, and the main goal is to build an interactive front-end site that responds to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.
+
+
 
 [Back to top ⇧](#Survival-Guild)
 
 ## UX
-### Ideal User Demographic
-The ideal user for this website is:
-* Current user
-* New user
-* Survivalist
+###  User Demographic
+The user for this website is:
+* 
 
 ### User-Stories
 #### Current User Goals
