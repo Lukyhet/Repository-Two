@@ -1,3 +1,6 @@
+
+/*jshint sub:true*/
+
 /** Array of Objects for trivia - 30 questions */
 
 let trivia = [{
@@ -153,7 +156,7 @@ let trivia = [{
     options: ["Elysium", "I, Robot", "Blade Runner", "Minority Report"],
     answer: 3
 },
-]
+];
 
 /** Block scoped variables */
 
@@ -184,7 +187,7 @@ document.getElementById('try-again').addEventListener('click', rebootGame);
     timer = setInterval(function(){
         timerCounter = timerCounter + 1;
         document.getElementById('timer-counter').innerText = timerCounter.toString() + ' Seconds';
-    }, 1000)
+    }, 1000);
 }
 
 
@@ -239,12 +242,13 @@ function rebootGame() {
 }
 
 function showQuestion(question, number) {
-    document.getElementById('question-text').innerText = question['q'];
+
+    document.getElementById('question-text').innerText = question.q;
     document.getElementById('question-number').innerText = number;
-    document.getElementById('answer1').innerText = question['options'][0];
-    document.getElementById('answer2').innerText = question['options'][1];
-    document.getElementById('answer3').innerText = question['options'][2];
-    document.getElementById('answer4').innerText = question['options'][3];
+    document.getElementById('answer1').innerText = question.options[0];
+    document.getElementById('answer2').innerText = question.options[1];
+    document.getElementById('answer3').innerText = question.options[2];
+    document.getElementById('answer4').innerText = question.options[3];
 }
 
 function getNextQuestion() {
