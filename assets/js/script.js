@@ -302,26 +302,25 @@ function endGame() {
     document.getElementById("comment2").innerHTML = '11-14: Good! Keep up with the good movie fandom!';
     document.getElementById("comment3").innerHTML = '5-10: Average, get your popcorn ready and learn a bit more while enjoying a movie!';
     document.getElementById("comment4").innerHTML = '0-4: Booo...We know you can do better.';
+    let textToShowUp;
     if (score >= 14) {
-        var textToShowUp = '<span style="color:red"> Great! Have you consider a job in the movie industry?</span>';
+        textToShowUp = '<span style="color:red"> Great! Have you consider a job in the movie industry?</span>';
         document.getElementById("comment1").innerHTML = textToShowUp;
         document.getElementById("comment1").classList.remove('hidden-content');
     } else if (score >= 11) {
-        var textToShowUp = '<span style="color:red"> Good! Keep up with the good movie fandom!</span>';
+        textToShowUp = '<span style="color:red"> Good! Keep up with the good movie fandom!</span>';
         document.getElementById("comment2").innerHTML = textToShowUp;
         document.getElementById("comment2").classList.remove('hidden-content');
     } else if (score >= 5) {
-        var textToShowUp = '<span style="color:red"> Average, get your popcorn ready and learn a bit more while enjoying a movie!</span>';
+        textToShowUp = '<span style="color:red"> Average, get your popcorn ready and learn a bit more while enjoying a movie!</span>';
         document.getElementById("comment3").innerHTML = textToShowUp;
         document.getElementById("comment3").classList.remove('hidden-content');
     } else {
-        var textToShowUp = '<span style="color:red"> Booo...We know you can do better.</span>';
+        textToShowUp = '<span style="color:red"> Booo...We know you can do better.</span>';
         document.getElementById("comment4").innerHTML = textToShowUp;
         document.getElementById("comment4").classList.remove('hidden-content');
     }
 }
-
-
 
 
 
