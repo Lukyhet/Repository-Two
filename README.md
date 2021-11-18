@@ -31,7 +31,7 @@
 
 ## Introduction
 
-This quiz called Trivia Movie! the website was made to provide a fun quiz those interested in the film industry, the quiz eas created with entertainment purposes. The target audience is those who love movies and want to challenge their knowledge about them.
+This trivia called Trivia Movie! the website was made to provide a fun trivia those interested in the film industry, the trivia eas created with entertainment purposes. The target audience is those who love movies and want to challenge their knowledge about them.
 
 <details>
 

@@ -1,6 +1,6 @@
-/** Array of Objects-quiz questions */
+/** Array of Objects for trivia - 30 questions */
 
-let quiz = [{
+let trivia = [{
     q: "What is the color of the pill that Neo takes in the movie The Matrix?",
     options: ["Blue", "Red", "Green", "Silver"],
     answer: 1
@@ -155,24 +155,44 @@ let quiz = [{
 },
 ]
 
+/** Block scoped variables */
+
 let timerCounter = 0;
 let timer;
-let shuffleQuestions = [];
+let randomizeQuestions = [];
 let questionNumber = 1;
-let questionIndex = 0;
+let questionMarker = 0;
 let score = 0;
 let incorrectScore = 0;
 let startButton = document.getElementById("button");
-let homeBox = document.getElementById("home-box");
-let questionHolder = document.getElementById("question-area");
-startButton.addEventListener('click', startGame);
+let homeArea = document.getElementById("home-area");
+let questionContainer = document.getElementById("question-area");
+startButton.addEventListener('click', beginGame);
 document.querySelectorAll('.answer')
-    .forEach(button => button.addEventListener('click', validateAnswer));
-document.getElementById('try-again').addEventListener('click', resetGame);
+    .forEach(button => button.addEventListener('click', rateAnswer));
+document.getElementById('try-again').addEventListener('click', rebootGame);
 
-/** Functions for quiz based on Stack Overflow's How to randomize (shuffle) a JavaScript array?*/
 
-function shuffleQuestionsArray(array) {
+
+/** Functions for trivia */
+
+/**
+ * Array for timer
+ */
+ function startTimer(){
+    timerCounter = 0;
+    timer = setInterval(function(){
+        timerCounter = timerCounter + 1;
+        document.getElementById('timer-counter').innerText = timerCounter.toString() + ' Seconds';
+    }, 1000)
+}
+
+
+/**
+ * Randomizer based on Stack Overflow's 'How to randomize (shuffle) a JavaScript array?'
+*/
+
+function randomizeQuestionsArray(array) {
     let currentIndex = array.length,  randomIndex;
   
     // While there remain elements to shuffle...
@@ -190,29 +210,35 @@ function shuffleQuestionsArray(array) {
     return array;
   }
 
-  
+  /**
+   * Array for starting, rebooting and scores
+   */
 
-function startGame() {
-    homeBox.classList.add('hidden-content');
+function beginGame() {
+    homeArea.classList.add('hidden-content');
     document.getElementById('question-area').classList.remove('hidden-content');
-    shuffleQuestions = shuffleQuestionsArray(quiz);
-    displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+    randomizeQuestions = randomizeQuestionsArray(trivia);
+    showQuestion(randomizeQuestions[questionMarker], questionNumber);
     startTimer();
 }
 
-function resetGame() {
-    shuffleQuestions = [];
+function rebootGame() {
+    randomizeQuestions = [];
     questionNumber = 1;
-    questionIndex = 0;
+    questionMarker = 0;
     score = 0;
     incorrectScore = 0;
-    document.getElementById('result-box').classList.add('hidden-content');
-    displayScore();
-    displayIncorrectScore();
-    homeBox.classList.remove('hidden-content');
+    document.getElementById('result-area').classList.add('hidden-content');
+    showScore();
+    showIncorrectScore();
+    document.getElementById("comment1").classList.add('hidden-content');
+    document.getElementById("comment2").classList.add('hidden-content');
+    document.getElementById("comment3").classList.add('hidden-content');
+    document.getElementById("comment4").classList.add('hidden-content');
+    homeArea.classList.remove('hidden-content');
 }
 
-function displayQuestion(question, number) {
+function showQuestion(question, number) {
     document.getElementById('question-text').innerText = question['q'];
     document.getElementById('question-number').innerText = number;
     document.getElementById('answer1').innerText = question['options'][0];
@@ -224,108 +250,74 @@ function displayQuestion(question, number) {
 function getNextQuestion() {
     if (questionNumber < 16) {
         questionNumber = questionNumber + 1;
-        questionIndex = questionIndex + 1;
-        displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+        questionMarker = questionMarker + 1;
+        showQuestion(randomizeQuestions[questionMarker], questionNumber);
     } else {
-        finishGame();
+        endGame();
     }
 }
 
-function displayScore() {
+function showScore() {
     document.getElementById("score").innerText = score;
 }
 
-function displayIncorrectScore() {
+function showIncorrectScore() {
     document.getElementById("incorrect-score").innerText = incorrectScore;
 }
 
-function validateAnswer(event) {
+function rateAnswer(event) {
     const selectedAnswerText = event.target.innerText;
-    const currentQuestion = shuffleQuestions[questionIndex];
-    const correctAnswerIndex = currentQuestion.answer;
-    const correctAnswerText = currentQuestion.options[correctAnswerIndex];
-    if (correctAnswerText.localeCompare(selectedAnswerText) === 0) {
+    const presentQuestion = randomizeQuestions[questionMarker];
+    const rightAnswerIndex = presentQuestion.answer;
+    const rightAnswerText = presentQuestion.options[rightAnswerIndex];
+    if (rightAnswerText.localeCompare(selectedAnswerText) === 0) {
         score = score + 1; 
-        displayScore();
+        showScore();
     } else {
         incorrectScore = incorrectScore + 1;
-        displayIncorrectScore();
+        showIncorrectScore();
     }
     getNextQuestion();
 }
 
-function finishGame() {
+/**
+ * Array to end the trivia
+ */
+
+function endGame() {
     clearInterval(timer);
     document.getElementById('total-time').innerText = timerCounter.toString() + ' Seconds';
     timerCounter = 0;
     document.getElementById('timer-counter').innerText = '0 Seconds';
-    questionHolder.classList.add('hidden-content');
-    document.getElementById('result-box').classList.remove('hidden-content');
+    questionContainer.classList.add('hidden-content');
+    document.getElementById('result-area').classList.remove('hidden-content');
     document.getElementById('questions').innerText = 16;
     document.getElementById('total-correct').innerText = score;
     document.getElementById('total-incorrect').innerText = incorrectScore;
     document.getElementById("comment1").innerHTML = '14-16: Great! Have you consider a job in the movie industry?';
     document.getElementById("comment2").innerHTML = '11-14: Good! Keep up with the good movie fandom!';
-    document.getElementById("comment3").innerHTML = '5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie!';
+    document.getElementById("comment3").innerHTML = '5-10: Average, get your popcorn ready and learn a bit more while enjoying a movie!';
     document.getElementById("comment4").innerHTML = '0-4: Booo...We know you can do better.';
     if (score >= 14) {
-        var textToHighlight = '<span style="color:red"> 14-16: Great! Have you consider a job in the movie industry?</span>';
-        document.getElementById("comment1").innerHTML = textToHighlight;
+        var textToShowUp = '<span style="color:red"> Great! Have you consider a job in the movie industry?</span>';
+        document.getElementById("comment1").innerHTML = textToShowUp;
         document.getElementById("comment1").classList.remove('hidden-content');
     } else if (score >= 11) {
-        var textToHighlight = '<span style="color:red"> 11-14: Good! Keep up with the good movie fandom!</span>';
-        document.getElementById("comment2").innerHTML = textToHighlight;
+        var textToShowUp = '<span style="color:red"> Good! Keep up with the good movie fandom!</span>';
+        document.getElementById("comment2").innerHTML = textToShowUp;
         document.getElementById("comment2").classList.remove('hidden-content');
     } else if (score >= 5) {
-        var textToHighlight = '<span style="color:red"> 5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie!</span>';
-        document.getElementById("comment3").innerHTML = textToHighlight;
+        var textToShowUp = '<span style="color:red"> Average, get your popcorn ready and learn a bit more while enjoying a movie!</span>';
+        document.getElementById("comment3").innerHTML = textToShowUp;
         document.getElementById("comment3").classList.remove('hidden-content');
     } else {
-        var textToHighlight = '<span style="color:red"> 0-4: Booo...We know you can do better.</span>';
-        document.getElementById("comment4").innerHTML = textToHighlight;
+        var textToShowUp = '<span style="color:red"> Booo...We know you can do better.</span>';
+        document.getElementById("comment4").innerHTML = textToShowUp;
         document.getElementById("comment4").classList.remove('hidden-content');
     }
 }
 
-/**sound for button when clicked */
 
-const sounds = [];
-
-sounds.forEach((sound) => {
-    const btn = document.createElement('button');
-    btn.classList.add('btn');
-
-    btn.innerText = sound;
-
-    btn.addEventListener('click', ()=> {
-        stopSongs();
-        document.getElementById(sound).play();
-    })
-
-    document.getElementById('btn').appendChild(btn);
-
-})
-
-function stopSongs() {
-    sounds.forEach(sound => {
-        const song = document.getElementById(sound);
-
-        song.pause();
-        song.currentTime = 0;
-        
-    })
-}
-
-/**
- * Function for timer
- */
-function startTimer(){
-    timerCounter = 0;
-    timer = setInterval(function(){
-        timerCounter = timerCounter + 1;
-        document.getElementById('timer-counter').innerText = timerCounter.toString() + ' Seconds';
-    }, 1000)
-}
 
 
 

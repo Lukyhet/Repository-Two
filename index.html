@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A fun movie quiz for movie lovers">
-    <meta name="keywords" content="quiz, trivia, movies, score, movie lovers">
+    <meta name="description" content="A fun movie trivia for movie lovers">
+    <meta name="keywords" content="trivia, trivia, movies, score, movie lovers">
 
     <!--fontawesome and Google fonts-->
 
@@ -21,18 +21,18 @@
         <img class="logo" src="assets/images/palomitas-de-maiz4.png" alt="logo"> Movie Trivia!
     </h1>
 
-    <div class="home-box main-box" id="home-box">
+    <div class="home-area main-box" id="home-area">
         <h2>Ready?</h2>
 
         <p>Questions: <span class="questions">16</span></p>
         <p>Click the correct answer</p>
-        <button id="button" class="btn">Start Quiz</button>
+        <button id="button" class="btn">Start trivia</button>
     </div>
 
-    <div class="quiz-area main-box hidden-content" id="question-area">
-        
-        <div class="" id="timer-counter">
-         0 Seconds</div>
+    <div class="trivia-area main-box hidden-content" id="question-area">
+
+        <div class="timer" id="timer-counter">
+            0 Seconds</div>
 
         <div class="question-number" id="question-number">
         </div>
@@ -48,7 +48,6 @@
 
         </div>
 
-    
         <div class="score-area">
             <p class="scores">Correct Answers <span id="score">0</span></p>
             <p class="scores incorrect">Incorrect Answers <span id="incorrect-score">0</span></p>
@@ -57,8 +56,8 @@
 
 
 
-    <div class="result-box main-box hidden-content" id="result-box">
-        <h1>Quiz Results</h1>
+    <div class="result-area main-box hidden-content" id="result-area">
+        <h1>Trivia Results</h1>
         <table style="width:100%">
             <tr>
                 <th class="results">Total Questions</th>
@@ -77,16 +76,15 @@
                 <td><span class="total-correct" id="total-time"></span></td>
             </tr>
         </table>
-        
+
         <p class="comment hidden-content" id="comment1">14-16: Great! Have you consider a job in the movie industry?</p>
         <p class="comment hidden-content" id="comment2">11-14: Good! Keep up with the good movie fandom!</p>
-        <p class="comment hidden-content" id="comment3">5-10: Average, get your pop corn ready and learn a bit more while enjoying a movie!</p>
+        <p class="comment hidden-content" id="comment3">5-10: Average, get your popcorn ready and learn a bit more
+            while enjoying a movie!</p>
         <p class="comment hidden-content" id="comment4">0-4: Booo...We know you can do better!</p>
         <button type="button" class="btn" id="try-again">Try Again</button>
 
     </div>
-
-    <audio src="/assets/js/sounds/buttontick.mp3" id="sound"></audio>
 
 
 </body>
