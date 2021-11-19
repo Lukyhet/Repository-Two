@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Our trivia game is called 'Trivia Movie!'  It was made to provide a fun trivia challenge for those interested in movies. The target audience is those who love movies and want to test their knowledge about them.
+Our trivia game is called 'Movie Trivia!'  It was made to provide a fun trivia challenge for those interested in movies. The target audience is those who love movies and want to test their knowledge about them.
 
 <details>
 
@@ -15,7 +15,7 @@ Our trivia game is called 'Trivia Movie!'  It was made to provide a fun trivia c
 
 </details>
 
-Movie Trivia was created for entertainment purposes. It has thirty different questions and presents displays sixteen of them to the user. The subject of the trivia is “all about movies” and challenges the user’s general knowledge about this topic. When done, the trivia game shows a table of results that displays the correct and incorrect answers as well as the time taken to answer them.
+Movie Trivia was created for entertainment purposes. It has thirty different questions and displays sixteen of them to the user. The subject of the trivia is “all about movies” and challenges the user’s general knowledge about this topic. When finished, the trivia game shows a table of results that displays the scores of correct and incorrect answers as well as the time taken to answer them.
 
 This Trivia was made as the second milestone project to achieve the Diploma in Software Development at the Code Institute. 
 
@@ -28,389 +28,153 @@ The user for this website is:
 
 - Young and adult people who are interested in pop culture and the film indsutry. 
 - Those who enjoy playing short games and taking online quizes and trivias.
-- Movie lovers or film fans that consider fun to accumulate knowledge about this topic.
+- Movie lovers or film fans that consider fun to accumulate and test their knowledge about this topic.
 
 
 #### User Goals
 
-- To have a great time and test the user’s knowledge about movies.
-- See attractive and contrasting colours as well as a clear design in the trivia game.
-- Have clear scores and a timer to be able to assess the user’s abilities.
+- To have a good time and test the user’s knowledge about movies.
+- See an attractive website with contrasting colours as well as a clear design.
+- Have clear scores and a timer to be able to assess one's abilities.
 
-### Development-Planes
-To create a comprehensive website that answers the above user stories and identifies the functionality of the site, the developer must develop all aspects of the fictional world for which the website is being created for. This includes a background story, a breaking news feed, survival information and creating a how-to-guide to defend against infected individuals.
 
 ## Features 
 
-This is a one page website with with a trivia game tha displays a title 'Movie Trivia!', a logo which is a free .png icon made by (https://www.freepik.com) and downloaded from (https://www.flaticon.com/)
+This is a one page website with a trivia game tha displays a title 'Movie Trivia!', a logo which is a free .png icon made by (https://www.freepik.com) downloaded from (https://www.flaticon.com/). 
 
-the four sections are easily identifiable by the contrast of the background and the subtitles. The website has several features. These features are:
-</details>
+The trivia displays sixteen different questions about movies and four answer options, the user is instructed to click the right answer while the timer runs showing how many seconds takes for the user to solve the whole tiriva. At the end of the game the user gets to see a table with the total of questions, the amount of right answers, wrong answers and the total time taken to solve the trivia.
 
+At the bottom, there is a 'try again' button that resets the game and allows the user to get a new chance. The user gets questions in a different order and some new questions mixed. The code contains thirty options of questions and a randomizer to be able to present new options to the user.
 
-#### Scope
-The scope plane is about defining requirements based on the goals established on the strategy plane. Using the information in the strategy plane, the identified required features have been broken into the following two categories.
-- Content Requirements:
-    - The user will be looking for:
-        - Information on the global situation
-        - Survival tips
-        - Camp setup tips
-        - Recommendations for equipment
-        - Tips and techniques for killing the Infected
-        - Backpack essentials
-- Functionality Requirements:
-    - The user will be able to:
-        - Be able to easily navigate the site to find the information they require.
-        - Be able to contact the site to report possible cases of infection.
+All the buttons, the questions and table are easily identifiable by the contrast of the background, lines, and text.
 
-#### Structure
-The information above was then organized in a hierarchical tree structure, a site map, showing how users can navigate through the site with ease and efficiency, with the following results:
+The buttons show a change in the border when pressed so the user can be sure that the button has been clicked.
 
 
-<details>
-<summary>Site Map</summary>
+#### Responsiveness
 
-![Site Map](assets/readme-files/sitemap.png)
-
-</details>
+The game counts with responsive design. ![Responsive design](assets/readme-files/ResponsiveMT.png)
 
 
-#### Skeleton
-Wireframes were made to showcase the appearance of the site pages while keeping a positive user experience in mind. The wireframes were created using a desktop version of [Balsamiq](https://balsamiq.com/).
+#### Wireframes
+  
+My wireframes: 
 
+- Start Page Wireframe - ![Start](/assets/readme-files/wireframe1.png)
 
-<details>
-<summary>Balsamiq Wireframes</summary>
-    
-![Site Wireframes](assets/readme-files/wireframe-all-pages.png)
+- Questions Page Wireframe - ![Questions](/assets/readme-files/Wireframe2.png)
+
+- Results Page Wireframe - ![Score](/assets/readme-files/wireframe3.png)
 
 </details>    
 
+To sketch an idea on how to make this game I used the following wireframes. I discussed with my mentor from Code Institute Antonio Rodriguez, who listened to my ideas and guided me through the process, at the end the decission was to make a clean quiz about a movies that would include a timer, randomizer and several extra options of answers. I also looked for examples of quizes online as inspiration. 
 
-In addition to this, concept art was made using [Figma] (https://www.figma.com/) to showcase the appearance of the home page. The concept art made some improvements upon the initial wireframes with regards to layout and features. but stayed mostly true to the original design.
-
-
-<details>
-<summary>Figma Concept Art</summary>
-
-![Homepage Detailed Wireframe](assets/readme-files/figma-homepage-mobile.PNG)
-![Homepage Detailed Wireframe](assets/readme-files/figma-homepage-desktop.PNG)
-
-</details>
-
+An example of inspirational site is [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k). 
 
 ### Design
+
 #### Colour Scheme
-Using the [Colourmind](http://colormind.io/template/material-dashboard/) colour palette generator, the colour scheme chosen is based on the colour Hazard Yellow. This is complemented by a very light green colour named Snow Drift, a light green close to Spring Rain, a red colour close to Deep Chestnut, and a medium-dark shade of cyan. The deep checstnut colour's opacity was altered to produce a lighter shade for the background (#E2DDDC).
 
-This colour palette was chosen based on the colour Hazard Yellow, which is used on all hazardous materials and signs. The colour represents the danger presented by the infected individuals in the fictional story.
-
-All content text is charcoal-coloured {#383838) as this colour compliments the other colours on the site while still taking into account those who may be visually impaired.
-
-
-<details>
-<summary>Colour Palette</summary>
-
-![Colour Palette](assets/readme-files/colour-palette.png)
-
-</details>
+The color palette was chosen by the developer based on the colors of the 'popcorn icon' used as the logo of the Movie Trivia, the background is soft yellow inspired in popcorn, the lines in the table and the comment to the user after finishing the game are red after the red lens in the 3D glasses whereas the light and dark blue hues were selected after the blue lens in the 3D glasses used to watch 3D movies. The colors chosen are hues of the primary colors creating a compatible and harmonious colour scheme. 
 
 
 #### Typography
-The typography pairing used on the site are [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open), [Special Elite](https://fonts.google.com/specimen/Special+Elite?query=speci) and [Oswald](https://fonts.google.com/specimen/Oswald?query=osw), imported from [Google Fonts](https://fonts.google.com/). A backup of Sans-Serif had been applied in case of import failure.
 
-Special Elite was chosen for the title on the header, with a slogan underneath using the font Oswald. Oswald will be used for headings, with Open Sans being used for standard text.
+The typography selected was the font Lato, that is a well balanced easy to read font imported from [Google Fonts](https://fonts.google.com/). A backup of Sans-Serif is in place in case of main font failure.
 
-#### Imagery
-The selected imagery has been sourced and created from various sites. Fake news reports and Twitter feeds will feature on the home page in a news feed style setup. 
 
-Images of "The Infected" have been sourced from a freelance concept artist, [Soufiane Idrassi](https://www.artstation.com/cgsoufiane), through the website [Art Station](https://www.artstation.com/). 
 
-Various images, found in the [readme-files](assets/readme-files) folder, have been gathered for use across the site. These range from images of weapons to camping equipment.
+## Debugging
 
-[Back to top](#Survival-Guild)
+Only a couple of bugs were detected by developer tools. One of them was about the comments displayed at the end of the game, below the scores table. 
 
-## Features
-### Design Features
-Each page within the site has a consistent and responsive navigation system. The details of features on the site are detailed below.
-- The **Header** is across the top of the page. It is not static as this would cover too much of the screen. A back-to-top button was implemented instead so users can access the navigation bar quickly.
-- The **Navigation Bar** is positioned directly below the header. The navigation bar is only used for screen sizes larger than 1200px. It is then replaced by a hamburger menu.
-- The **Navigation Bar** collapses into a **Hamburger Menu** that, when clicked or tapped, opens a sidebar which shows the navigation options.
-- The **Footer** is 100% in width and 40px in height. It stays at the bottom of the screen at all times, on all screen sizes. Each social media link opens in a new tab. Additionally, each social media link opens a zombie related link on each respective website; eg. the Facebook icon links to the Facebook page for [The Zombie Survival Guide book](https://www.facebook.com/TheZombieSurvivalGuide/).
+It should be only one comment displayed at the time and it should be selected according to the user’s score. But two of them were being displayed, the one from the first try and the one from the second try. To fix this the developer needed to make an adjustment adding a 'hidden-content' attribute to the comments, as follows:
 
-<dl>
-    <dt><a href="index.html" target="_blank" alt="Survival Guild Home Page">Home Page</a></dt>
-    <dd>
-        The <em>Home Page</em> is a scrollable page with the main content divided into two columns on larger screens, shifting into a single column on smaller screens.
-        <ul>
-            <li>
-                <em>Introduction</em> - This text-only section introduces the user to the page. 
-            </li>
-            <li>
-                <em>Competition Banner</em> - Covering 100% of the width of the screen, the competition banner is not static and moves with the page. Clicking on the image will bring you directly to the Competition Page.
-            </li>
-            <li>
-                <em>Content</em> - The World News section is a text-only column to the left of the screen on larger screen sizes. Below this is the Twitter Feed, a heading and image only column, which is another column kept to the right of the screen on larger screen sizes. The News Feed section, a text and image column, keeps to the right on larger screen sizes. On smaller screen sizes, each section expands and becomes a single long column. The order from top to bottom is World News, News Feed, and finally the Twitter Feed section. 
-            </li>
-            <li>
-                <em>Back-to-top Button</em> - A Back-to-top button is on the bottom right of the screen, above the footer. This button will bring the user back to the top of the page from any point on the page. 
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>
-    <dt><a href="survival-tips.html" target="_blank" alt="Survival Guild - Survival Tips Page">Survival Tips Page</a></dt>
-    <dd>
-        The <em>Survival Tips Page</em> is a scrollable page with the main content laid out in a single column, regardless of screen size.
-        <ul>
-            <li>
-                <em>Introduction</em> - This text-only section introduces the user to the page. 
-            </li>
-            <li>
-                <em>Page Section Buttons</em> - There are three buttons that will bring the user to each of the sections on the page. This allows the user to get to the information they require quicker with less scrolling.
-            </li>
-            <li>
-                <em>Competition Banner</em> - Covering 100% of the width of the screen, the competition banner is not static and moves with the page. Clicking on the image will bring you directly to the Competition Page.
-            </li>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em>, <em>images</em> and some <em>videos</em> embedded from YouTube. The images and videos change size following the screen size to provide a better user experience.
-            </li>
-            <li>
-                <em>Back-to-top Button</em> - A Back-to-top button is on the bottom right of the screen, above the footer. This button will bring the user back to the top of the page from any point on the page. 
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>
-    <dt><a href="camp-setup.html" target="_blank" alt="Survival Guild - Camp Setup Page">Camp Setup Page</a></dt>
-    <dd>
-        The <em>Camp Setup Page</em> has all the same features as the Survival Tips Page, only with fewer videos embedded.
-    </dd>
-</dl>
-<dl>    
-    <dt><a href="infected.html" target="_blank" alt="Survival Guild - The Infected Page">The Infected Page</a></dt>
-    <dd>
-        <em>The Infected Page</em> has all the same features as the Survival Tips Page, but without videos embedded and with only two Page Section Buttons.
-    </dd>
-</dl>
-<dl>
-    <dt><a href="contact.html" target="_blank" alt="Survival Guild - Contact Page">Contact Page</a></dt>
-    <dd>
-        The <em>Contact Page</em> is a scrollable page with two columns of content, which become a single column on smaller screen sizes.
-        <ul>
-            <li>
-                <em>Introduction</em> - This text-only section introduces the user to the page. 
-            </li>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em>, <em>text input boxes</em> and a <em>map</em> embedded from Google Maps. The telephone number and email have <a> elements that divert the user to their email or phone app, allowing ease of access if they wish to contact the site manager. The map changes size following the screen size to provide a better user experience.
-            </li>
-            <li>
-                <em>Form</em> - The form contains three input boxes for names and email and a text box for the user to enter a message. There is a submit button below these which changes colour when hovered over. Sending a message through this form brings the user to a Thank You Page. 
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>    
-    <dt><a href="competition.html" target="_blank" alt="Survival Guild - Competition Page">Competition Page</a></dt>
-    <dd>
-        The <em>Competition Page</em> is a scrollable page with two columns of content, which become a single column on smaller screen sizes.
-        <ul>
-            <li>
-                <em>Introduction</em> - This section has text and one wide image, the same as the competition banner without the link, which introduces the user to the page. 
-            </li>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em>, <em>text input boxes</em> and a <em>scrollable box</em>, which contains the terms and conditions of the competition, laid out into two columns on larger screens. On smaller screen sizes, the two columns rearrange to make one long column.
-            </li>
-            <li>
-                <em>Form</em> - The form contains four input boxes for names, date of birth and email, and a question and answer using radio buttons to select the correct answer for the competition entry. There is a submit button below these which changes colour when hovered over. Submitting an entry through this form brings the user to a Thank You Page. 
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>        
-    <dt><a href="dump-contact.html" target="_blank" alt="Survival Guild - Contact Thank You Page">Contact Thank You Page</a></dt>
-    <dd>
-        The <em>Contact Thank You Page</em> is a single page made to thank the user for contacting the Survival Guild.
-        <ul>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em> and an <em>image</em>, which thanks the user for submitting a message on the Contact Page.
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>        
-    <dt><a href="dump-competition.html" target="_blank" alt="Survival Guild - Competition Thank You Page">Competition Thank You Page</a></dt>
-    <dd>
-        The <em>Competition Thank You Page</em> is a single page made to thank the user for entering the Survival Guild competition.
-        <ul>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em> and an <em>image</em>, which thanks the user for entering the competition on the Competition Page.
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>        
-    <dt><a href="404.html" target="_blank" alt="Survival Guild - 404 - Page Not Found">404 - Page Not Found</a></dt>
-    <dd>
-        The <em>404 Page</em> is a single page that appears when a user enters the wrong address into the address bar. It is made into a mini-game/story style to entertain the user before returning to the main site. Each page in the story has a different background image that relates to the text.
-        <ul>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em> and <em>links</em>, which allows the user to go directly to the home page or interact with the story.
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>
-    <dt><a href="500.html" target="_blank" alt="Survival Guild - 500 - Internal Server Error">500 - Internal Server Error</a></dt>
-    <dd>
-        The <em>500 Page</em> is the same as the 404 page except for a different heading letting the user know there was an internal server error.
-    </dd>
-</dl>
-<dl>    
-    <dt><a href="bike.html" target="_blank" alt="Survival Guild - Page 2 of the Story">Page 2 of the Story</a></dt>
-    <dd>
-        The <em>Second Page</em> in the story is a single page that appears when a user clicks the link to continue the story. Each page in the story has a different background image that relates to the text.
-        <ul>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em> and <em>links</em>, which allows the user to go directly to the home page or continue interacting with the story.
-            </li>
-        </ul>
-    </dd>
-</dl>
-<dl>    
-    <dt><a href="house.html" target="_blank" alt="Survival Guild - Page 3 of the Story">Page 3 of the Story</a></dt>
-    <dd>
-        The <em>Third Page</em> in the story is a single page that appears when a user clicks the link to continue the story. Each page in the story has a different background image that relates to the text.
-        <ul>
-            <li>
-                <em>Content</em> - The content is made up of <em>text</em> and a single <em>link</em>, which allows the user to go directly to the home page.
-            </li>
-        </ul>
-    </dd>
-</dl>
+`document.getElementById("comment1").classList.add('hidden-content');`
 
-### Existing Features
-- **Header** - Appearing on almost every page for brand recognition.
-- **Navigation Bar** - Appearing on almost every page for a consistently easy and intuitive navigable system on larger screens.
-- **Hamburger Menu** - Appearing on almost every page for a consistently easy and intuitive navigable system on smaller screens.
-- **Social Media Icons** - Appearing on almost every page, the icons are appropriate representations of the Social Media platforms, linking users to various zombie related pages and the developers GitHub account. The icons appear in the centre of the footer.
-- **Youtube Embed** - Videos relating to the content on the Survival Tips Page and the Camp Setup Page have been embedded. These videos were embedded to emphasise the content and provide additional information relating to the content.
-- **Google Maps Embed** - iframe embedding of Google maps, showing the location of Northern Ireland's Secret Bunker was added to the Contact Page. The map is resized depending on the screen size to ensure the readability of the page on mobile devices.
-- **Contact Form** - A contact form is used in the Contact Page, to provide a point of contact for the user.
-- **404 page** - A 404 page providing a unique user experience in the form of a mini-game/story redirects the user to the home page or, if the user chooses, to additional story pages to continue the experience.
-- **500 page** - A 500 page providing a unique user experience in the form of a mini-game/story redirects the user to the home page or, if the user chooses, to additional story pages to continue the experience.
-- **[Survival Tips Page](survival-tips.html "Survival Guild - Survival Tips Page")** - Providing survival tips for the users to get an understanding of how to survive the apocalypse.
-- **[Camp Setup Page](camp-setup.html "Survival Guild - Camp Setup Page")** - Providing camp setup tips for the users to get an understanding of setting up a strong and safe camp during the apocalypse.
-- **[The Infected Page](infected.html "Survival Guild - The Infected Page")** - Providing information relating to the Infected and how to defend yourself against them.
-- **[Contact Page](contact.html "Survival Guild - Contact Page")** - Providing contact details for the Survival Guild, a map to Northern Ireland's Secret Bunker, and a form allowing the user to enter the Survival Guild.
-- **[Competition Page](competition.html "Survival Guild - Competition Page")** - Providing details for the Survival Guild's competition, a terms and conditions box, and a form allowing the user to enter the Survival Guild's competition.
+Other types pf bugs detected were related to typos in the javascript code and fixed by correcting it.
+
 
 ### Features to Implement in the future
-- **Helpful Links Page**
-     - **Feature** - create a page with links to external sites where users can purchase the items discussed on the various pages.
-     - **Reason for not featuring in this release** - Not enough time to create this page before the submission date.
+- **Sounds**
+     - During the developing stages of this project to add audio at the begining of the trivia and sounds to the buttons was part of the UX but we need to leave it for a next project as more time is needed.
+     
 
-[Back to top](#Survival-Guild)
+## Main Languages Used
 
-## Issues and Bugs 
-The developer ran into several issues during the development of the website, with the noteworthy ones listed below, along with solutions or ideas to implement in the future.
-
-**Background Bug** - A bug was detected early in development in the background of the main pages. While entering content onto the home page, the background colours were not covering the entire page, cutting off short and leaving a white background behind some of the content. The developer put a query to the #css-essentials channel in Slack and was provided with a simple piece of code from another user of Slack (Anthony O'Brien) which resolved the issue. It was from here that the developer was able to copy the code given as a solution to the bug, with celebratory success. This same issue occurred later on other pages, which the same piece of code was able to rectify.
-
-<details>
-<summary>Background Bug</summary>
-    
-![Background Bug](assets/readme-files/background-bug.png)
-    
-</details>
-
-**Navigation Bar/Hamburger Menu Responsiveness Bug** - A bug was detected while introducing responsiveness to the navigation bar and hamburger menu. At 1200px exactly, both the navigation bar and hamburger menus vanished. It was found that this was caused by setting the hamburger menu to be hidden at 1200px and up, and the navigation bar to be hidden at 1200px and down. The issue was rectified simply by changing the hamburger menu to be hidden from 1201px and up instead.
-
-**Google Maps Embedding Bug** - A bug was detected when embedding the Google map to be used for the Contact Page. The developer was previously using the web address to embed the map into the contact page. This caused an error that prevented the map from loading. The developer found that the link was to be embedded using the pre-existing embedding code provided by Google Maps, which was previously unknown to the developer. Upon implementing the correct embedding code, the map worked perfectly.
-
-**Back-to-top Button Bug** - A bug was detected in the Back-to-top Button where the Awesome Fonts arrow up icon disappeared. It was found that the developer was using the wrong class to colour the icon, causing it to appear invisible. This was rectified by introducing a new class name of "top-home", to which the colouring was applied. In addition to this, during the validation of the code, an error appeared in the code for the button. It appears that the code borrowed from <a href="https://secluded.site/adding-a-better-scroll-to-top-button-without-javascript/">Secluded.Site</a> was causing the problem. While the code worked perfectly, the creator placed a <button> element as a descendant of the <a> element, causing the error.
-
-**Double-click Ads Link Bug** - A bug was detected in the developer tools console. On the survival-tips.html and camp-setup.html pages, a bug appeared saying "Loading failed for the <script> with source 'http://static.doubleclick.net/instream/as-status.js'". After careful testing, the source of the bug was found to be the YouTube videos embedded in the page, which the developer was unable to alter to remove the bug. 
-
-<details>
-<summary>Background Bug</summary>
-    
-![Ad double-click Bug](assets/readme-files/double-click-bug.PNG)
-    
-</details>
-    
-[Back to top](#Survival-Guild)
-    
-## Technologies Used
-### Main Languages Used
-- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
-- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wikipedia")
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wikipedia")
+- [JS](https://en.wikipedia.org/wiki/JavaScript "Link to JS Wikipedia")
 
 ### Frameworks, Libraries & Programs Used
-- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
-    - Google fonts was used to import the fonts "Special Elite", "Open Sans", "Oswald" and "Nosifer" into the style.css file. These fonts were used throughout the project.
-- [Font Awesome](https://fontawesome.com/ "Link to FontAwesome")
-     - Font Awesome was used on almost all pages throughout the website to import icons (e.g. social media icons) for UX purposes.
-- [GitPod](https://gitpod.io/ "Link to GitPod homepage")
-     - GitPod was used for writing code, commiting, and then pushing to GitHub.
-- [GitHub](https://github.com/ "Link to GitHub")
-     - GitHub was used to store the project after pushing
-- [Balsamiq](https://balsamiq.com/ "Link to Balsamiq homepage")
-     - Balsamiq was used to create the wireframes during the design phase of the project.
-- [Figma](https://www.figma.com/ "Link to Figma homepage")
-     - Figma was used to create the concept art during the design phase of the project.
-- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
-     - Am I Responsive was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
 
-[Back to top](#Survival-Guild)
+- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
+    - Google fonts was used to import the font Lato to style.css file.
+- [GitPod](https://gitpod.io/ "Link to GitPod homepage")
+     - GitPod was as workspace for writing code,
+- [GitHub](https://github.com/ "Link to GitHub")
+     - GitHub is being used to store this repository.
+- [Flaticon](https://www.flaticon.com/ "Link to Flaticon"). 
+     - Flaticon was used to download a free .png icon for the trivia.
+- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
+     - Am I Responsive was used to check the responsiveness of the design.
+- [W3C](https://validator.w3.org/ "Markup Validation Service")
+     - W3C Was used to validate the HTML code.
+- [W3C](https://validator.w3.org/ "Markup Validation Service")
+     - W3C Was used to validate the CSS code.
+- [JShint](https://jshint.com/ "JShint")
+     - JShint Was used to validate the JS code.
+
     
 ## Testing
 
-Testing information can be found in a separate testing [file](TESTING.md "Link to testing file")
+
+The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate all the code of this repository and every warning was corrected until the code came up clean in every validator mentioned.
+
+-W3C Markup Validator ![HTML](/assets/readme-files/htmlvalidated.png)
+
+-W3C CSS Validator ![CSS](/assets/readme-files/cssValidated.png)
+
+-JSHint javaSrcipt Validator ![JS](/assets/readme-files/JSValidated.png)
+
 
 ## Deployment
 
-This project was developed using [GitPod](https://www.gitpod.io/ "Link to GitPod site"), which was then committed and pushed to GitHub using the GitPod terminal.
-
-### Deploying on GitHub Pages
-To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
-
-1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-2. Locate the [GitHub Repository](https://github.com/Irishbecky91/survival-guild "Link to GitHub Repo").
-3. At the top of the repository, select Settings from the menu items.
-4. Scroll down the Settings page to the "Pages" section.
-5. Under "Source" click the drop-down menu labelled "None" and select "Main".
-6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
-7. Scroll back down to the "Pages" section to retrieve the deployed link.
-    
+This project was deployed in Github [View the live project here](https://lukyhet.github.io/Repository-Two/).
 
     
 ## Credits 
 
 ### Content
-- Some of the text used in the the various pages were borrowed and adapted from various sites, listed below.
-    - [Reserve America](https://www.reserveamerica.com/outdoors/how-to-start-a-campfire.html "Link to Reserve America - How to Start a Campfire")
-    - [Seeker](https://www.seeker.com/top-ways-to-purify-water-in-the-wilderness-1765491027.htmlhttps://www.seeker.com/top-ways-to-purify-water-in-the-wilderness-1765491027.html "Link to Seeker - Purifying Water")
-    - [Survival Freedom]( https://survivalfreedom.com/10-ways-to-build-a-shelter-out-of-natural-resources/ "Link to Survival Freedom - Building Shelter from Natural Resources")
 
-### Media
-- Almost all images were sourced from the various artists from [Unsplash](https://unsplash.com/ "Link to Unsplash") and [Pixabay](https://pixabay.com/ "Link to Pixabay").
-- The images of "The infected" were sourced from [Soufiane Idrassi](https://www.artstation.com/cgsoufiane "Link to Soufiane Idrassi's account on Art Station") through the website [Art Station](https://www.artstation.com/ "Link to Art Station Home Page").
-- All videos were sourced from various channels on [YouTube](https://youtube.com/ "Link to YouTube Home Page")
+- Some of the questions used in the trivia were taken from 100 Fun Movie Trivia Questions (With Answers) to Stump All Your Film-Loving Friends available in:
+
+    - [Parade](https://parade.com/977752/samuelmurrian/movie-trivia/ "Link to Parade")
+
+- The rest (majority) of the questions were created by the developer.
 
 ### Code 
-The developer consulted multiple sites in order to better understand the code they were trying to implement. For code that was copied and edited, the developer made sure to reference this with the code. The following sites were used on a more regular basis:
-- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
-- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
 
-[Back to top](#Survival-Guild)
+Several sources were consulted and their guides followed, for example:
+
+- The randomizer and other features were made following the guidelines of stackoverflow
+- [StackOverflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/ "Link to StackOverflow").
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page") 
+
+### Media
+
+- The icon used for the logo was downloaded for free from [Flaticon](https://www.flaticon.es/ "Link to Flaticon") 
+- The images used in this README.md file were taken by the developer as printscreens or pictures.
+
 
 ## Acknowledgements
 
-- I would like to thank my family for their valued opinions and critic during the process of design and development.
-- I would like to thank my tutor, Kasia, and my mentor, Seun, for their invaluable help and guidance throughout the process.
-- Lastly, I would like to extend my deepest gratitude to the amazing people in Slack who helped me rigorously test every aspect of my site.
+- I want to thank and recognize the amazing job of my mentor Antonio Rodriguez who guided me and patiently taught me through the whole project process.
+- I also want to mention and thank John from student tutors at Code Institute for taking the time and explaining how to work through the warnings of the JS validator.
 
-[Back to top](#Survival-Guild)
+
+[Back to top](#Movie-Trivia!)
 
 ***
